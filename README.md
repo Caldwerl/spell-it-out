@@ -1,2 +1,2 @@
 # spell-it-out
-Small code challenege involving numbers and letters
+Small code challenge involving numbers and letters
