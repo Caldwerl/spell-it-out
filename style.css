@@ -1,4 +1,62 @@
-#stringElem {
+body {
+    background-color: #333E47;
+    color: #FFC826;
+    font-family: 'proxima-nova', sans-serif;
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+input {
+    border: none;
+}
+
+#contentElem {
+    min-height: 350px;
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
+
+.notString {
+    font-size: 2.5em;
+    padding-top: 150px;
+}
+
+.panel {
+    color: #000;
+    background-color: #A6B3BF;
+    border: none;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.btn-default {
+    background-color: #FFC826;
+}
+
+.btn-default:hover {
+    background-color: #FFD966;
+}
+
+.nav-tabs > li > a {
+    background-color: #FFF;
+    color: #000;
+    margin-top: 50px;
+}
+
+.nav-tabs > li > a:hover {
+    background-color: #FFF;
+    color: #555;
+    cursor: pointer;
+}
+
+.nav-tabs > li.active > a {
+    background-color: #A6B3BF;
+    color: #000;
+}
+
+.nav-tabs > li.active > a:hover {
+    background-color: #A6B3BF;
+    cursor: pointer;
 }

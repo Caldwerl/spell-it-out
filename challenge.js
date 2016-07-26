@@ -88,29 +88,61 @@ function findProbability(selectedChar, string) {
 
     return occurenceMap[selectedChar] / string.length;
 }
-
+// I took 'between 1 and 123' to mean 'from 1 to 123'
 var startNum = 1;
 var endNum = 123;
-var selectChar = ''
+var selectChar = '';
+var probability = '';
+var probabilityString = 'Enter a letter to find the probability of randomly selecting it from the string.';
 var theString = createNumberString(startNum, endNum);
 var occurences = findProbability(selectChar, theString);
 
-var stringElem = $('#stringElem');
-var lengthElem = $('#lengthElem');
-var probabilityElem = $('#probabilityElem');
+var stringTab = $('#stringTab');
+var lengthTab = $('#lengthTab');
+var probabilityTab = $('#probabilityTab');
+var contentElem = $('#contentElem');
 var probabilityInputElem = $('#probabilityInput');
+var progressElem = $('.progress-bar');
 
-stringElem.text(theString);
-lengthElem.text('The length of this string is ' + theString.length + ' characters.');
-probabilityElem.parent().hide();
+contentElem.text(theString);
+
+stringTab.click(selectStringTab);
+
+lengthTab.click(selectLengthTab);
+
+probabilityTab.click(selectProbabilityTab);
 
 function handleInputChange() {
     selectChar = probabilityInputElem.val();
-    console.log('It changed!', selectChar);
+    probability = (findProbability(selectChar, theString) * 100).toFixed(2);
+    probabilityInputElem.val('');
+
     if (!!selectChar) {
-        probabilityElem.text('The probability of selecting the letter ' + selectChar + ' at random is ' + findProbability(selectChar, theString) * 100 + '%');
-        probabilityElem.parent().show();
+        probabilityString = 'The probability of selecting the letter \'' + selectChar + '\' at random is ' + probability + '%';
     } else {
-        probabilityElem.parent().hide();
+        probabilityString = 'Enter a letter to find the probability of randomly selecting it from the string.';
     }
+
+    selectProbabilityTab();
 };
+
+function selectProbabilityTab() {
+    probabilityTab.addClass('active');
+    stringTab.removeClass('active');
+    lengthTab.removeClass('active');
+    contentElem.text(probabilityString).addClass('notString');
+}
+
+function selectLengthTab() {
+    lengthTab.addClass('active');
+    stringTab.removeClass('active');
+    probabilityTab.removeClass('active');
+    contentElem.text('The length of this string is ' + theString.length + ' characters.').addClass('notString');
+}
+
+function selectStringTab() {
+    stringTab.addClass('active');
+    lengthTab.removeClass('active');
+    probabilityTab.removeClass('active');
+    contentElem.text(theString).removeClass('notString');
+}

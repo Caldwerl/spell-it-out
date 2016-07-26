@@ -17,28 +17,27 @@
     <body>
 
         <div class="container">
-            <div class="page-header text-center">
+            <div class="text-center">
                 <h1>Spell It Out For Me</h1>
-                <h1 class="small">Numbers Turned To Text Turned To Data</h1>
+                <h3>Numbers Turned To Text Turned To Data</h3>
             </div>
+            <br>
 
-            <div class="panel panel-default text-center">
-                    <div class="panel-body" id="stringElem"></div>
-            </div>
-
-            <div class="panel panel-default text-center">
-                    <div class="panel-body" id="lengthElem"></div>
-            </div>
-
-            <div class="input-group col-xs-6 col-sm-4 col-sm-offset-4">
+            <div class="input-group col-sm-4 col-sm-offset-4">
                 <input type="text" class="form-control" maxlength="1" id="probabilityInput">
                 <span class="input-group-btn">
                     <button type="button" class="btn btn-default" onclick="handleInputChange()">Find Probability</button>
                 </span>
             </div>
+            <br>
 
-            <div class="panel panel-default text-center">
-                    <div class="panel-body" id="probabilityElem"></div>
+            <ul class="nav nav-tabs col-sm-8 col-sm-offset-2">
+                <li class="active" id="stringTab"><a>String</a></li>
+                <li id="lengthTab"><a>Length</a></li>
+                <li id="probabilityTab"><a>Probability</a></li>
+            </ul>
+            <div class="panel panel-default text-center col-sm-8 col-sm-offset-2">
+                <div class="panel-body" id="contentElem"></div>
             </div>
         </div>
 
