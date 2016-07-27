@@ -104,7 +104,8 @@ $(function () {
     var probabilityInputElem = $('#probabilityInput');
     var buttonElem = $('button');
 
-    function handleInputChange() {
+    function handleInputChange(e) {
+        e.preventDefault();
         selectChar = probabilityInputElem.val();
         probability = findProbability(selectChar, theString);
         probabilityInputElem.val('');
