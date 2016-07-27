@@ -102,6 +102,7 @@ $(function () {
     var probabilityTab = $('#probabilityTab');
     var contentElem = $('#contentElem');
     var probabilityInputElem = $('#probabilityInput');
+    var buttonElem = $('button');
 
     function handleInputChange() {
         selectChar = probabilityInputElem.val();
@@ -146,4 +147,6 @@ $(function () {
     lengthTab.click(selectLengthTab);
 
     probabilityTab.click(selectProbabilityTab);
+
+    buttonElem.click(handleInputChange);
 });
