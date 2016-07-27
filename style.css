@@ -1,10 +1,11 @@
 body {
     background-color: #333E47;
     color: #FFC826;
-    font-family: 'proxima-nova', sans-serif;
+    font-family: 'adelle', serif;
 }
 
 h1 {
+    font-family: 'proxima-nova', sans-serif;
     font-size: 4.5em;
 }
 
@@ -16,19 +17,6 @@ input {
     min-height: 350px;
     overflow-wrap: break-word;
     word-wrap: break-word;
-}
-
-.notString {
-    font-size: 2.5em;
-    padding-top: 150px;
-}
-
-.panel {
-    color: #000;
-    background-color: #A6B3BF;
-    border: none;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
 }
 
 .btn-default {
@@ -59,4 +47,35 @@ input {
 .nav-tabs > li.active > a:hover {
     background-color: #A6B3BF;
     cursor: pointer;
+}
+
+.notString {
+    font-size: 1.2em;
+    padding-top: 120px;
+}
+
+.page-header {
+    border-bottom: none;
+}
+
+.panel {
+    color: #000;
+    background-color: #A6B3BF;
+    border: none;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.progress {
+    margin-top: 50px;
+}
+
+.progress-bar {
+    background-color: #FFC826;
+    color: #000;
+    min-width: 4em;
+}
+
+.counter {
+    font-size: 4.5em;
 }
